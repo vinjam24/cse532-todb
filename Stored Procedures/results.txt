@@ -1,0 +1,25 @@
+a) Following is the output of sql file for binstart = 30000
+
+
+
+BINNUM      FREQUENCY   BINSTART    BINEND
+----------- ----------- ----------- -----------
+          1          22       30000       50000
+          2          11       50000       70000
+          3           5       70000       90000
+          4           3       90000      110000
+          5           0      110000      130000
+          6           0      130000      150000
+          7           1      150000      170000
+
+
+b) Folowing is the output of the JDBC code:
+
+binnun		frequency	binstart	binend		
+1		22		30000		50000		
+2		11		50000		70000		
+3		5		70000		90000		
+4		3		90000		110000		
+5		0		110000		130000		
+6		0		130000		150000		
+7		1		150000		170000		
