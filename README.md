@@ -1,1 +1,1 @@
-# CSE532: Theory of Database Systems Coding Assignments
+### Collection of CSE532 : Theroy of Databse Systems coding assignments. Description of assignment is mentioned in the readme of respective directory 
