@@ -1,0 +1,4 @@
+WITH TOP_TEN_POP AS (SELECT "zip" FROM (
+SELECT z."zip" , rank() over(ORDER BY z."population" desc) AS rnum FROM ZIPCENSUS z ) WHERE rnum <=10),
+RANKED_COLLISION_ZIP AS (SELECT "zip", RANK() OVER (ORDER BY count_zip desc) AS rnum FROM (SELECT z."zip" , count(*) AS count_zip  FROM COLLISION c JOIN ZIPCENSUS z ON z."zip" = c."zip_code" GROUP BY z."zip")) 
+SELECT RANKED_COLLISION_ZIP."zip" FROM TOP_TEN_POP JOIN RANKED_COLLISION_ZIP ON RANKED_COLLISION_ZIP."zip" = TOP_TEN_POP."zip" WHERE RANKED_COLLISION_ZIP.rnum <= 10

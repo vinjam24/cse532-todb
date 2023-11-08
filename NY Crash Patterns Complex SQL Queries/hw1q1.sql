@@ -1,0 +1,1 @@
+SELECT MONTH(c."date") AS "Month", HOUR(c."time") AS "hour", count(*) AS collisions FROM COLLISION c GROUP BY cube (MONTH(c."date"), HOUR(c."time"))

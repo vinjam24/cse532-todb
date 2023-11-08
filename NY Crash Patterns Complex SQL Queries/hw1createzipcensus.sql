@@ -1,0 +1,1 @@
+create TABLE zipcensus("rank" int, "population_density" decimal(7,1), "zip" varchar(5) NOT null, "population" int, PRIMARY KEY("zip"));
